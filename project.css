@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(225, 170, 255) ; 
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: right;
+    background-position-y:center;
+border-radius: 10px;
+}
+h1 {
+    position: absolute;top: 60px; right: 150px;
+font-size:180%;
+font-family:'Times New Roman', Times, serif;
+-webkit-text-fill-color: rgba(13, 25, 93, 0.482);
+}
+h2 {
+    position: absolute;top: 100px; right: 54px;
+    -webkit-text-fill-color:rgba(0, 21, 255, 0.385);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 134%;
+}
+pre {
+    font-size: 120%;
+    position: absolute; top: 160px; right: 70px;
+    text-align:justify;
+}
+img {
+border-radius: 8px;
+position: absolute; top: 50px;left:50px
+}
