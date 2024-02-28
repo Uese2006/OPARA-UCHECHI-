@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
     background-position-x: right;
     background-position-y:center;
-border-radius: 10px;
+border-radius: 20px;
 ;
 }
 h1 {
@@ -31,9 +31,10 @@ pre {
     flex-wrap: wrap;
     align-items:center;
     justify-content:center;
-    position: absolute; top: 30%; right:8%;
-    color:rgb(85, 129, 204);
-    
+    /* border: solid 1px red; */
+    position: absolute; top: 50%; right: 10px;
+    color:white;
+    /* justify-content: space-around; */
 }
 
 .big-text {
@@ -45,6 +46,12 @@ pre {
 
 .countdown-el {
     text-align: center;
+    background-color:rgb(85, 129, 204) ;
+    margin: 10px;
+    height: auto;
+    box-shadow: 2px 3px 6px grey;
+    /* border: solid 1px red; */
+
 }
 
 .countdown-el span {
