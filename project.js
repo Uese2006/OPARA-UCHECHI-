@@ -1,22 +1,32 @@
-document.addEventListener("DOMContentLoaded",
-function() {
-    var targetDate = new Date("march 15,2024 00:00:00").getTime();
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minsEl = document.getElementById("mins");
+const secondsEl = document.getElementById("seconds");
 
-    var timerElement=
-    document.getElementById("timer");
-    function updateTimer() {
-        var currentDate = newDate().getTime()
-        vartimedifference = targetDate - currentDate;
-        var days = Math.floor(timeDifference/(1000 * 60 * 60 * 24));
-        var hours = Math.floor((timeDifference % (1000 * 60 * 60 *24 ))/(1000 * 60 * 60));
-        var minutes = math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        timerElement.innerHTML= 'Time left: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds';
-        if (timeDifference > 0){
-            setTimeout(updateTimer, 1000);
-        }else{
-            timerElement.innerHTML = "Time's up";
-        }
-    }
-    updateTimer();
-});
+const newYears = "15 march 2024";
+
+function countdown() {
+    const newYearsDate = new Date(newYears);
+    const currentDate = new Date();
+
+    const totalSeconds = (newYearsDate - currentDate) / 1000;
+
+    const days = Math.floor(totalSeconds / 3600 / 24);
+    const hours = Math.floor(totalSeconds / 3600) % 24;
+    const mins = Math.floor(totalSeconds / 60) % 60;
+    const seconds = Math.floor(totalSeconds) % 60;
+
+    daysEl.innerHTML = days;
+    hoursEl.innerHTML = formatTime(hours);
+    minsEl.innerHTML = formatTime(mins);
+    secondsEl.innerHTML = formatTime(seconds);
+}
+
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+// initial call
+countdown();
+
+setInterval(countdown, 1000);
